@@ -32,43 +32,64 @@ body {
 
 .first, .second, .third, .fourth {
     border: 2px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: arial;
+    font-weight: 700;
 }
 
 .first {
     height: auto;
     width: auto;
-    background-color:brown ;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    transition: background-color 0.5s ;
 }
+.first:hover {
+    background-color:#4c7c8e;
+}
+
 .second {
     height: auto;
     width:auto;
-    background-color:blueviolet ;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
+    transition: background-color 0.5s ;
 }
+.second:hover {
+    background-color:#b9414b;
+}
+
 .third {
     height: auto;
     width: auto;
-    background-color:blue ;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 4;
+    transition: background-color 0.5s ;
 }
+.third:hover {
+    background-color:#b9414b;
+}
+
 .fourth {
     height: auto;
     width: auto;
-    background-color:red ;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+    transition: background-color 0.5s ;
+}
+.fourth:hover {
+    background-color:#4c7c8e;
 }
 
 
