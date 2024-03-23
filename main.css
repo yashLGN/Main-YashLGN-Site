@@ -6,7 +6,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 150px 1fr;
     grid-template-columns: 1fr 150px 1fr;
-    min-height: 100vh;
+    min-height:100vh;
     transition:grid-template-rows 0.5s , grid-template-columns 0.5s ;
 }
 
@@ -20,14 +20,14 @@ body {
     transition: height 0.5s , width 0.5s;
 }
 .img {
-    height:150px;
-    width: 150px;
+    height:146px;
+    width: 146px;
     border: 2px black solid;
     transition: height 0.5s , width 0.5s;
 }
 .img:hover {
-    height: 250px;
-    width: 250px;
+    height: 246px;
+    width: 246px;
 }
 
 .first, .second, .third, .fourth {
@@ -38,6 +38,7 @@ body {
     font-size: 30px;
     font-family: arial;
     font-weight: 700;
+    color: black;
 }
 
 .first {
@@ -92,4 +93,9 @@ body {
     background-color:#4c7c8e;
 }
 
+@media (max-width:600px) {
+    .first, .second, .third, .fourth {
+        font-size: 20px;
+    }    
+}
 

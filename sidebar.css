@@ -1,0 +1,95 @@
+.top {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 300vw;
+    background-color: white;
+    border-bottom: 5px black solid;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 300vw;
+    background-color: white;
+    border-top: 5px black solid;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+.scrollA {
+    display: flex;
+    flex-direction: row;
+    animation: slide 45s linear infinite;
+    overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+.firsttxt {
+    max-width: 200px;
+    margin: 0 20px;
+    font-family: arial;
+    font-weight: 550;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 300vh;
+    width: auto;
+    background-color: white;
+    border-right: 5px black solid;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 300vh;
+    width: auto;
+    background-color: white;
+    border-left: 5px black solid;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.scrollB {
+    display: flex;
+    flex-direction: column;
+    animation: slideB 40s linear infinite;
+    overflow: hidden;
+    padding: 0 5px;
+    white-space: nowrap;
+}
+.firsttxtb {
+    max-height: 200px;
+    margin: 40px 0;
+    font-family: arial;
+    font-weight: 550;
+}
+@keyframes slideB {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+@media (max-width:600px) {
+    .right,.bottom,.left {
+        visibility: hidden;
+    }
+    .top {
+        width: 600vw;
+    }
+    .scrollA {
+        animation: slide 25s linear infinite;
+    }
+}
