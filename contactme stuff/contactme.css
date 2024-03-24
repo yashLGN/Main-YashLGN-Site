@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.themechanger {
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.theme {
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #4c7c8e;
+    border: 2px black solid;
+    border-radius: 20px;
+    transition:color 0.5s ,background-color 0.5s;
+}
+.theme:hover {
+    color: white;
+}
+.theme:active {
+    background-color: white;
+}
+
+.backhome {
+    background-color: #4c7c8e;
+    border-radius: 20px;
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:background-color 0.5s;
+}
+.backhome:hover {
+    background-color: white;
+}
+.homeicon {
+    height: 25px;
+    width: 25px;
+    padding: 5.5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.title {
+    background-color: #4c7c8e;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    color: black;
+    border-bottom:5px black solid;
+}
+.top {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 300vw;
+    background-color: white;
+    border-bottom: 4px black solid;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+.scrollA {
+    display: flex;
+    flex-direction: row;
+    animation: slide 45s linear infinite;
+    overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+.firsttxt {
+    max-width: 200px;
+    margin: 0 20px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 550;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.mainstuff {
+    height: auto;
+    width: 100%;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.left ,.right {
+    background-color: white;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    text-decoration: none;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.5s , color 0.5s;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.left:hover , .right:hover {
+    color: white;
+    background-color: black;
+}
+@media (max-width: 700px) {
+    .outer {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .left {
+        font-size: 20px;
+    }
+}
+.leftheading, .leftbio {
+    margin: 0;
+}
+.right {
+    align-items: center;
+}
+input:focus {
+    outline: none; 
+    border-color: transparent;
+    box-shadow: none; 
+  }
+  textarea {
+    resize: none;
+  }
+ textarea:focus {
+    outline: none; 
+    border-color: transparent;
+    box-shadow: none; 
+  }
+.formtag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.yourname {
+    width: 280px;
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: arial;
+    transition: height 0.5s;
+    margin-bottom: 10px;
+}
+
+.yourname:active {
+    height: 40px;
+}
+.yourname:hover {
+    height: 40px;
+}
+
+.youremail {
+    width: 280px;
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: arial;
+    margin-bottom: 10px;
+    transition: height 0.5s;
+}
+
+.youremail:active {
+    height: 40px;
+}
+.youremail:hover {
+    height: 40px;
+}
+
+.yourmessage {
+    width: 282px;
+    height: 80px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: grey;
+    font-family: arial;
+    transition: height 0.5s;
+    margin-bottom: 10px;
+}
+
+.yourmessage:active {
+    height: 100px;
+}
+.yourmessage:hover {
+    height: 100px;
+}
+
+.sendbutton {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(73,120,140,255);
+    color: black;  
+    transition:color 0.5s;
+}
+
+.sendbutton:hover {
+    color: rgba(73,120,140,255);
+    background-color: black;
+}
+
+@media (max-width:700px) {
+    .mainstuff {
+        grid-template-columns: 1fr;
+    }
+    .left {
+        align-items: center;
+    }
+}
