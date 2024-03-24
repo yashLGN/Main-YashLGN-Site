@@ -35,8 +35,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Ubuntu Mono", monospace;
     font-size: 30px;
-    font-family: arial;
     font-weight: 700;
     color: black;
 }
@@ -53,6 +53,9 @@ body {
 .first:hover {
     background-color:#4c7c8e;
 }
+.first:active {
+    background-color:#4c7c8e;
+}
 
 .second {
     height: auto;
@@ -64,6 +67,9 @@ body {
     transition: background-color 0.5s ;
 }
 .second:hover {
+    background-color:#b9414b;
+}
+.second:active {
     background-color:#b9414b;
 }
 
@@ -79,6 +85,9 @@ body {
 .third:hover {
     background-color:#b9414b;
 }
+.third:active {
+    background-color:#b9414b;
+}
 
 .fourth {
     height: auto;
@@ -92,6 +101,9 @@ body {
 .fourth:hover {
     background-color:#4c7c8e;
 }
+.fourth:active {
+    background-color:#4c7c8e;
+}
 
 @media (max-width:600px) {
     .first, .second, .third, .fourth {
@@ -99,3 +111,13 @@ body {
     }    
 }
 
+.anchor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+}

@@ -31,7 +31,7 @@
 .firsttxt {
     max-width: 200px;
     margin: 0 20px;
-    font-family: arial;
+    font-family: "Ubuntu Mono", monospace;
     font-weight: 550;
 }
 @keyframes slide {
@@ -74,7 +74,7 @@
 .firsttxtb {
     max-height: 200px;
     margin: 40px 0;
-    font-family: arial;
+    font-family: "Ubuntu Mono", monospace;
     font-weight: 550;
 }
 @keyframes slideB {
