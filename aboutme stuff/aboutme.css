@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.themechanger {
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.theme {
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #4c7c8e;
+    border: 2px black solid;
+    border-radius: 20px;
+    transition:color 0.5s ,background-color 0.5s;
+}
+.theme:hover {
+    color: white;
+}
+.theme:active {
+    background-color: white;
+}
+
+.backhome {
+    background-color: #4c7c8e;
+    border-radius: 20px;
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:background-color 0.5s;
+}
+.backhome:hover {
+    background-color: white;
+}
+.homeicon {
+    height: 25px;
+    width: 25px;
+    padding: 5.5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.title {
+    background-color: #4c7c8e;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    color: black;
+    border-bottom:5px black solid;
+}
+.top {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 300vw;
+    background-color: white;
+    border-bottom: 4px black solid;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+.scrollA {
+    display: flex;
+    flex-direction: row;
+    animation: slide 45s linear infinite;
+    overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+.firsttxt {
+    max-width: 200px;
+    margin: 0 20px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 550;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.mainstuff {
+    height: 60%;
+    width: 100%;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.outer {
+    background-color: white;
+    height: 15vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.5s , color 0.5s;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.outer:hover {
+    color: white;
+    background-color: black;
+}
+@media (max-width: 700px) {
+    .outer {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
